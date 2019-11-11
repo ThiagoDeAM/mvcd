@@ -12,7 +12,8 @@ function adicionar() {
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $senha = $_POST["senha"];
-        $msg = adicionarUsuario($nome, $email, $senha);
+        $papel = $_POST["papel"];
+        $msg = adicionarUsuario($nome, $email, $senha, $papel);
         redirecionar("usuario/index");
     } else {
         exibir("usuario/formulario");
@@ -28,7 +29,9 @@ function editar($id) {
     if (ehPost()) {
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $msg = editarUsuario($id, $nome, $email);
+        $senha = $_POST["senha"];
+        $papel = $_POST["papel"];
+        $msg = editarUsuario($id, $nome, $email, $senha, $papel);
         redirecionar("usuario/index");
     } else {
         $dados["usuario"] = pegarUsuarioPorId($id);

@@ -6,6 +6,7 @@
             <th>ID</th>
             <th>NOME</th>
             <th>EMAIL</th>
+            <th>PAPEL</th>
             <th>VIEW</th>
             <th>EDIT</th>
             <th>DELETE</th>
@@ -16,6 +17,7 @@
         <td><?=$usuario['id']?></td>
         <td><?=$usuario['nome']?></td>
         <td><?=$usuario['email']?></td>
+        <td><?=$usuario['papel']?></td>
         <td><a href="./usuario/visualizar/<?=$usuario['id']?>" class="btn btn-secondary">view</a></td>
         <td><a href="./usuario/editar/<?=$usuario['id']?>" class="btn btn-info">edit</a></td>
         <td><a href="./usuario/deletar/<?=$usuario['id']?>" class="btn btn-danger">del</a></td>

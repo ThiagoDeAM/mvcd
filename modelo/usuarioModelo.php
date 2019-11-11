@@ -17,16 +17,16 @@ function pegarUsuarioPorId($id) {
     return $usuario;
 }
 
-function adicionarUsuario($nome, $email, $senha) {
-    $sql = "INSERT INTO usuario (id, nome, email, senha) 
-			VALUES (NULL,'$nome', '$email', '$senha')";
+function adicionarUsuario($nome, $email, $senha, $papel) {
+    $sql = "INSERT INTO usuario (id, nome, email, senha, papel) 
+			VALUES (NULL,'$nome', '$email', '$senha', '$papel')";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) { die('Erro ao cadastrar usuário' . mysqli_error($cnx)); }
     return 'Usuario cadastrado com sucesso!';
 }
 
-function editarUsuario($id, $nome, $email) {
-    $sql = "UPDATE usuario SET nome = '$nome', email = '$email' WHERE id = $id";
+function editarUsuario($id, $nome, $email, $senha, $papel) {
+    $sql = "UPDATE usuario SET nome = '$nome', email = '$email', senha = '$senha', papel = '$papel' WHERE id = $id";
     $resultado = mysqli_query($cnx = conn(), $sql);
     if(!$resultado) { die('Erro ao alterar usuário' . mysqli_error($cnx)); }
     return 'Usuário alterado com sucesso!';

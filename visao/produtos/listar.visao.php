@@ -3,6 +3,7 @@
 <table class="table" border="1">
     <thead>
         <tr>
+            <th>Imagem</th>
             <th>Código</th>
             <th>Nome</th>
             <th>Preço</th>
@@ -16,6 +17,7 @@
     </thead>
     <?php foreach ($produtos as $produto): ?>
         <tr>
+            <td><img src="<?= $produto['imagem'] ?>" style="heigth: 100px; width: 100px;"></td>
             <td><?= $produto['idproduto'] ?></td>
             <td><?= $produto['nomeproduto'] ?></td>
             <td><?= $produto['preco'] ?></td>
